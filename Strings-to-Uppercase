@@ -1,0 +1,34 @@
+package com.company;
+
+import java.util.*;
+
+public class Main
+{
+    public static void main(String[] args)
+    {
+        Scanner in=new Scanner(System.in);
+        System.out.print("Enter the String: ");
+        String string=in.nextLine();
+        String string_to_upper="";
+        for(int i=0;i<string.length();i++)
+        {
+            if (string.charAt(i)>=90 && string.charAt(i)<=122)
+            {
+                int char_value=(int)string.charAt(i);
+                int result =char_value - 32;
+                char value=(char)result;
+                string_to_upper+=value;
+            }
+            else
+                string_to_upper+=string.charAt(i);
+        }
+        System.out.print("The strings in upper case "+string_to_upper);
+    }
+}
+
+
+
+
+
+
+
